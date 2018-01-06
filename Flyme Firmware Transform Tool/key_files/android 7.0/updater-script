@@ -1,0 +1,34 @@
+ui_print("*************************************");
+ui_print("魅蓝note3线刷交流群：652374279");
+ui_print("魅蓝note3玩机交流群：548918085");
+ui_print("Script Edited by Ridiculous");
+ui_print("*************************************");
+
+ui_print("更新中...");
+block_image_update("/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system", package_extract_file("system.transfer.list"), "system.new.dat", "system.patch.dat", "0.8");
+format("ext4", "EMMC", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/custom", "0", "/custom");
+ui_print("*************************************");
+ui_print("望岳");
+ui_print("唐 杜甫");
+
+package_extract_file("boot.img", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/boot");
+ui_print("岱宗夫如何？齐鲁青未了。");
+
+package_extract_file("md1dsp.img", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/md1dsp");
+package_extract_file("md1arm7.img", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/md1arm7");
+package_extract_file("md1rom.img", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/md1img");
+package_extract_file("md3rom.img", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/md3img");
+ui_print("造化钟神秀，阴阳割昏晓。");
+
+package_extract_file("lk.bin", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/lk2");
+package_extract_file("trustzone.bin", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/tee2");
+package_extract_file("preloader_mz6755_66_n.bin", "/tmp/preloader_mz6755_66_n.bin");
+write_raw_image("/tmp/preloader_mz6755_66_n.bin", "/dev/block/mmcblk0boot1");
+ui_print("荡胸生曾云，决眦入归鸟。");
+
+package_extract_file("lk.bin", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/lk");
+package_extract_file("trustzone.bin", "/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/tee1");
+write_raw_image("/tmp/preloader_mz6755_66_n.bin", "/dev/block/mmcblk0boot0");
+delete("/tmp/preloader_mz6755_66_n.bin");
+ui_print("会当凌绝顶，一览众山小。");
+ui_print("*************************************");
