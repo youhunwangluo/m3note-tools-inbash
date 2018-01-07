@@ -88,7 +88,7 @@ if %exist_original_file%==0 (
 	goto intro )
 if exist "%current_path%extracted" ( rd /s /q "%current_path%extracted")
 mkdir "%current_path%extracted"
-"%current_path%bin\7z" x "%current_path%flyme\update.zip" -o"%current_path%extracted"
+"%current_path%add\7z" x "%current_path%flyme\update.zip" -o"%current_path%extracted"
 set next_step=4
 goto intro
 
@@ -133,7 +133,7 @@ goto intro
 :file_compressing
 echo --------------------------------------------------------------------------------
 echo                                      文件打包
-"%current_path%bin\7z" a "%current_path%twrp\%main_update%.zip" "%current_path%extracted\*"
+"%current_path%add\7z" a "%current_path%twrp\%main_update%.zip" "%current_path%extracted\*"
 set next_step=6
 goto intro
 
